@@ -1,0 +1,55 @@
+version: "3.1"
+
+rules:
+
+  - rule: Say goodbye anytime the user says goodbye
+    steps:
+      - intent: goodbye
+      - action: utter_goodbye
+
+  - rule: Say 'I am a bot' anytime the user challenges
+    steps:
+      - intent: bot_challenge
+      - action: utter_iamabot
+
+  - rule: Run a followup start action anytime the user affirms
+    steps:
+      - intent: affirm
+      - action: action_followup
+
+  - rule: Start recording
+    steps:
+      - intent: main_ui_recording
+        entities:
+          - recording_start_action
+      - action: action_start_recording
+
+  - rule: Stop recording
+    steps:
+      - intent: main_ui_recording
+        entities:
+          - recording_stop_action
+      - action: action_stop_recording
+
+  - rule: Activate Select Car Form
+    steps:
+      - intent: select_car
+      - action: car_selection_form
+      - active_loop: car_selection_form
+
+  - rule: Activate Select Car Form if intent `detailed_car_selection` is extracted outside form
+    condition:
+      - active_loop: null
+    steps:
+      - intent: detailed_car_selection
+      - action: action_detailed_car_selection
+
+  - rule: Submit Select Car Form
+    condition:
+      - active_loop: car_selection_form
+    steps:
+      - action: car_selection_form
+      - active_loop: null
+      - slot_was_set:
+          - requested_slot: null
+      - action: action_car_selection

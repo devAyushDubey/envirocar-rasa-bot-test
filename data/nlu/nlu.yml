@@ -1,0 +1,196 @@
+version: "3.1"
+
+nlu:
+  - intent: greet
+    examples: |
+      - hey
+      - hello
+      - hi
+      - hello there
+      - good morning
+      - good evening
+      - moin
+      - hey there
+      - let's go
+      - hey dude
+      - goodmorning
+      - goodevening
+      - good afternoon
+
+  - intent: goodbye
+    examples: |
+      - cu
+      - good by
+      - cee you later
+      - good night
+      - bye
+      - goodbye
+      - have a nice day
+      - see you around
+      - bye bye
+      - see you later
+
+  - intent: affirm
+    examples: |
+      - yes
+      - y
+      - sure
+      - yep
+      - yup
+      - do it
+
+  - intent: deny
+    examples: |
+      - no
+      - n
+      - never
+      - I don't think so
+      - don't like that
+      - no way
+      - not really
+
+  - intent: mood_great
+    examples: |
+      - perfect
+      - great
+      - amazing
+      - feeling like a king
+      - wonderful
+      - I am feeling very good
+      - I am great
+      - I am amazing
+      - I am going to save the world
+      - super stoked
+      - extremely good
+      - so so perfect
+      - so good
+      - so perfect
+
+  - intent: mood_unhappy
+    examples: |
+      - my day was horrible
+      - I am sad
+      - I don't feel very well
+      - I am disappointed
+      - super sad
+      - I'm so sad
+      - sad
+      - very sad
+      - unhappy
+      - not good
+      - not very good
+      - extremly sad
+      - so saad
+      - so sad
+
+  - intent: bot_challenge
+    examples: |
+      - are you a bot?
+      - are you a human?
+      - am I talking to a bot?
+      - am I talking to a human?
+
+  - intent: main_ui_recording
+    examples: |
+      - I want to [start](recording_start_action) recording
+      - recording
+      - can you [start](recording_start_action) recording
+      - [set up](recording_start_action) record
+      - can you [stop](recording_stop_action) recording
+      - [close](recording_stop_action) recording
+
+  - lookup: recording_start_action
+    examples: |
+      - start
+      - begin
+      - set up
+      - launch
+
+  - lookup: recording_stop_action
+    examples: |
+      - stop
+      - end
+      - finish
+      - over
+      - close
+      - shut
+      - shutdown
+
+  - intent: select_car
+    examples: |
+      - i'd like to select a car
+      - i'd like to choose a car
+      - i'd like to pick a car
+      - i'd like to get a car
+      - i'd like to select my car
+      - i'd like to choose my car
+      - i'd like to pick my car
+      - i'd like to get my car
+      - i select a car
+      - i choose a car
+      - i want a car
+      - i pick a car
+      - can i select a car
+      - can i choose a car
+      - can i pick a car
+      - can i get a car
+      - I'm interested in selecting a car
+      - I'm interested in choosing a car
+      - I'm interested in picking a car
+      - I'm interested in getting a car
+      - i want to select a car
+      - i want to choose a car
+      - i want to pick a car
+      - i want to get a car
+      - select car
+      - choose car
+      - pick car
+      - get car
+      - please select car
+      - please choose car
+      - please pick car
+      - please get car
+
+  - intent: detailed_car_selection
+    examples: |
+      - i'd like [first](car_selection_number) car
+      - i'd like [second](car_selection_number) car
+      - i'd like [third](car_selection_number) car
+      - i want to select [first](car_selection_number) car
+      - i want to select [second](car_selection_number) car
+      - i want to select  [third](car_selection_number) car
+      - [first](car_selection_number) car
+      - [second](car_selection_number) car
+      - [third](car_selection_number) car
+      - i want [first](car_selection_number) car
+      - i want [second](car_selection_number) car
+      - i want [third](car_selection_number) car
+      - select [first](car_selection_number) car
+      - select [second](car_selection_number) car
+      - select [third](car_selection_number) car
+      - can you select [first](car_selection_number) car
+      - can you select [second](car_selection_number) car
+      - can you select [third](car_selection_number) car
+      - please select [first](car_selection_number) car
+      - choose [second](car_selection_number) car
+      - choose [third](car_selection_number) car please
+
+  - synonym: select
+    examples: |
+      - select
+      - choose
+      - pick
+      - get
+
+  - lookup: car_selection_number
+    examples: |
+      - first
+      - second
+      - third
+      - next
+      - previous
+
+  - intent: envirocar_info
+    examples: |
+      - what is envirocar?
+      - envirocar

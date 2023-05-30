@@ -1,0 +1,8 @@
+__pycache__/
+.rasa/
+models/
+.idea/
+Pipfile.lock
+story_graph.dot
+
+endpoints.yml
