@@ -19,7 +19,7 @@ jobs:
           ref: ${{ github.event.pull_request.head.sha }}
       - name: RTTG Action Step
         id: action
-        uses: RasaHQ/rasa-train-test-gha@main
+        uses: devAyushDubey/rasa-train-test-gha-enviroCar@main
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
       - name: Output Test Report
