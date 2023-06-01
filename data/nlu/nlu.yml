@@ -29,6 +29,7 @@ nlu:
       - see you around
       - bye bye
       - see you later
+      - see ya
 
   - intent: affirm
     examples: |

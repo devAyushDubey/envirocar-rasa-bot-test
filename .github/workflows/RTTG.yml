@@ -6,6 +6,8 @@ on:
       - opened
       - reopened
 
+permissions: write-all
+
 jobs:
   training-testing:
     name: Rasa Training and Testing GHA
