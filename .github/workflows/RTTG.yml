@@ -1,7 +1,7 @@
 name: Rasa Train Test Workflow
 
 on:
-  pull_request:
+  pull_request_target:
     types:
       - opened
       - reopened
@@ -21,7 +21,7 @@ jobs:
         id: action
         uses: RasaHQ/rasa-train-test-gha@main
         with:
-          github_token: ${{ secrets.GH_TOKEN }}
+          github_token: ${{ secrets.GITHUB_TOKEN }}
       - name: Output Test Report
         run: |
           echo "Test Report is as follows:"
