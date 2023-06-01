@@ -6,11 +6,12 @@ on:
       - opened
       - reopened
 
+permissions: write-all
+
 jobs:
   training-testing:
     name: Rasa Training and Testing GHA
     runs-on: ubuntu-latest
-    permissions: write-all
     steps:
       - name: GitHub Checkout PR
         uses: actions/checkout@v3
